@@ -7,9 +7,12 @@ export const receiveTournament = tournament => ({
   tournament
 });
 
-export const createTournament = tournament => async (dispatch) => dispatch(
-  receiveTournament( await Api.createTournament(tournament) )
-);
+export const createTournament = tournament => async (dispatch) => {
+  console.log(tournament);
+  dispatch(
+    receiveTournament( await Api.createTournament(tournament) )
+  )
+};
 
 
 export const RECEIVE_MATCHES = 'RECEIVE_MATCHES';
