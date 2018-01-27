@@ -74,9 +74,10 @@ class HomePage extends React.Component {
                     onChange={event => this.setState({playersString: event.target.value})}></textarea>
           <button onClick={() => createPlayers({playersString, tournament_id})
                                    .then(allPlayers => {
-                                     console.log(allPlayers);
+                                     const playersArray = Object.values(allPlayers.players.by_id);
+                                     console.log(playersArray);
                                      createMatches({
-                                     players: Object.values(allPlayers.players.by_id),
+                                     players: playersArray,
                                      current_round});
                                      }
                                    )}>Sign Up Players
