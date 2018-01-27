@@ -8,7 +8,6 @@ export default () => (
   <div>
     <Switch>
       <AuthRoute exact path='/' component={HomePageContainer}/>
-      {/* <ProtectedRoute exact path='/customers' component={CustomersIndexPageContainer}/> */}
     </Switch>
   </div>
 );

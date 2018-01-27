@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
-// import sessionReducer from './sessionReducer';
-import errorsReducer from './errorsReducer';
+import tournamentReducer from './tournamentReducer';
+import playersReducer from './playersReducer';
+import matchesReducer from './matchesReducer';
+// import errorsReducer from './errorsReducer';
 // import loadingReducer from './loadingReducer';
 
 export default combineReducers({
-  // session: sessionReducer,
-  errors: errorsReducer,
+  tournament: tournamentReducer,
+  players: playersReducer,
+  matches: matchesReducer
+  // errors: errorsReducer,
   // ui: loadingReducer
 });

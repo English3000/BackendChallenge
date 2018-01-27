@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
   namespace :api, defaults: {format: :json} do
-    
+    resources :tournaments, only: [:create]
+    resources :players, only: [:create]
+    resource :matches, only: [:update, :create]
   end
 end
